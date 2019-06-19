@@ -15,6 +15,7 @@ public class LaunchPage extends BasePage {
 	
 	public void clickOnSignIn()
 	{
+		waitForElementVisible(SignIn_By);
 		driver.findElement(SignIn_By).click();
 	}
 

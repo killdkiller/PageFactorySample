@@ -19,7 +19,13 @@ public class HomePage  extends BasePage {
 	
 	public String getAccountName()
 	{
+		waitForElementVisible(AccountName_By);
 		return(driver.findElement(AccountName_By).getText());
+	}
+	
+	public boolean isSignOutEnabled()
+	{
+		return(driver.findElement(SignOutForm_By).isEnabled());
 	}
 
 }

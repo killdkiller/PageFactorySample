@@ -36,5 +36,10 @@ public class LogInPage  extends BasePage {
 		clickOnSignIn();
 	}
 	
+	public boolean isSignInEnabled()
+	{
+		return (driver.findElement(SignInForm_By).isEnabled());
+	}
+	
 
 }

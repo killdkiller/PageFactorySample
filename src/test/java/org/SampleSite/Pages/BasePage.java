@@ -5,10 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import samplesite.utils.ConfigureConstants;
+
 public class BasePage {
-	public static final int MINTIME = 10;
-	public static final int MIDTIME = 30;
-	public static final int MAXTIME = 60;
     WebDriver driver ;
     public BasePage(WebDriver driver)
     {
@@ -17,13 +16,13 @@ public class BasePage {
     
     public void waitForElementVisible(By by)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, MIDTIME);
+		WebDriverWait wait = new WebDriverWait(driver, ConfigureConstants.MIDTIME);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 	}
 	
 	public void waitForElemenClickble(By by)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, MIDTIME);
+		WebDriverWait wait = new WebDriverWait(driver, ConfigureConstants.MIDTIME);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 	}
 	
