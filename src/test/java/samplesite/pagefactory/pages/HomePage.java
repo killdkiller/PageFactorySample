@@ -15,11 +15,9 @@ public class HomePage extends BasePage {
 	
 	@FindBy(className="account")
 	private WebElement AccountNameEle;
-
-	private WebDriver driver;
 	
 	public HomePage(WebDriver driver) {
-		this.driver=driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -38,7 +36,7 @@ public class HomePage extends BasePage {
 	
 	public String getAccountName()
 	{
-		waitForElementVisible(AccountNameEle,driver);
+		waitForElementVisible(AccountNameEle);
 		return(AccountNameEle.getText());
 	}
 	

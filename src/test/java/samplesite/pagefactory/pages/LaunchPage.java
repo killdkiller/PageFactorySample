@@ -9,16 +9,15 @@ public class LaunchPage extends BasePage {
 	
 	@FindBy(className="login")
 	private WebElement SignInEle;
-	
-	private WebDriver driver;
 
 	public LaunchPage(WebDriver driver) {
-		this.driver=driver;		
+		super(driver);
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public void clickOnSignIn()
 	{
-		waitForElementVisible(SignInEle, driver);
+		waitForElementVisible(SignInEle);
 		SignInEle.click();
 	}
 

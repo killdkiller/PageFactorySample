@@ -8,14 +8,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import samplesite.utils.ConfigureConstants;
 
 public class BasePage {
+	
+	public WebDriver driver;
+	
+	public BasePage(WebDriver driver)
+	{
+		this.driver=driver;
+	}
 	    
-	    public void waitForElementVisible(WebElement ele, WebDriver driver)
+	    public void waitForElementVisible(WebElement ele)
 		{
 			WebDriverWait wait = new WebDriverWait(driver, ConfigureConstants.MIDTIME);
 			wait.until(ExpectedConditions.visibilityOf(ele));
 		}
 		
-		public void waitForElemenClickble(WebElement ele,  WebDriver driver)
+		public void waitForElemenClickble(WebElement ele)
 		{
 			WebDriverWait wait = new WebDriverWait(driver, ConfigureConstants.MIDTIME);
 			wait.until(ExpectedConditions.elementToBeClickable(ele));

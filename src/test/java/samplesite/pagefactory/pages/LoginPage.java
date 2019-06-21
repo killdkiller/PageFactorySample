@@ -15,11 +15,9 @@ public class LoginPage extends BasePage {
 	
 	@FindBy(id="SubmitLogin")
 	private WebElement SignInFormEle;
-	
-	private WebDriver driver;
 
-	public LoginPage(WebDriver driver) {
-		this.driver=driver;
+	public LoginPage(WebDriver driver){
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -38,11 +36,11 @@ public class LoginPage extends BasePage {
 	
 	public void LoginToStore(String username, String password)
 	{
-		waitForElementVisible(UserNameEle, driver);
+		waitForElementVisible(UserNameEle);
 		enterUsername(username);
-		waitForElementVisible(PasswordEle, driver);
+		waitForElementVisible(PasswordEle);
 		enterPassword(password);
-		waitForElemenClickble(SignInFormEle, driver);
+		waitForElemenClickble(SignInFormEle);
 		clickOnSignIn();
 	}
 	
