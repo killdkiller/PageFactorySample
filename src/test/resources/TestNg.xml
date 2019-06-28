@@ -1,0 +1,9 @@
+<suite  name ="SampleSuite1">
+	<test name ="SampleTest">
+		<parameter   name ="url"   value="http://automationpractice.com/index.php"></parameter>
+		<parameter  name ="browser"  value ="chrome"></parameter>
+			<classes>
+				<class name ="automationpractice.SampleSite.myFirstTestngTest"></class>
+			</classes>
+	</test>
+</suite>
