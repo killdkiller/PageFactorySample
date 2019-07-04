@@ -5,6 +5,7 @@
 			<classes>
 				<class name ="automationpractice.SampleSite.myFirstTestngTest"></class>
 				<class name ="automationpractice.SampleSite.DataProviderTest"></class>
+				<class name ="automationpractice.SampleSite.CheckingPriorityTest"></class>
 			</classes>
 	</test>
 </suite>

@@ -43,7 +43,18 @@ public class TestDataReader {
 			}
 		}
 		
-		
+		public LinkedHashMap<String, String>[][] gConvertToArray(List< LinkedHashMap<String, String>> objSheetData)
+		{
+			
+			LinkedHashMap<String, String>[][] araayTestData = new LinkedHashMap[objSheetData.size()][1];
+			for(int i=0;i<objSheetData.size();i++)
+			{
+				araayTestData[i][i]= objSheetData.get(i);
+			}
+			
+			return araayTestData;
+			
+		}
 
 
 		public static List< LinkedHashMap<String, String>> gFuncReadTestData(String sheetName)

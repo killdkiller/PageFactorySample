@@ -4,11 +4,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
 
 import samplesite.utils.ConfigureConstants;
+import samplesite.utils.TestDataReader;
 
 public class BaseTest {
 	static WebDriver driver;
+	TestDataReader objTestDataReader;
 	
 	public static void launchApplication()
 	{
@@ -24,5 +27,13 @@ public class BaseTest {
         driver.close();
         driver.quit();
     }
+	
+	@DataProvider(name="excelTestData")
+	public Object[][] loginData() throws Exception
+	{
+		objTestDataReader = new TestDataReader();
+		return objTestDataReader.gConvertToArray(objTestDataReader.gFuncReadTestData("Sheet1"));
+
+	}
 
 }
