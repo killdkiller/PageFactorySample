@@ -15,6 +15,9 @@ public class LoginPage extends BasePage {
 	
 	@FindBy(id="SubmitLogin")
 	private WebElement SignInFormEle;
+	
+	@FindBy(xpath ="//div[@class='alert alert-danger' and not(contains(@style, 'display:none'))]")
+	private WebElement authFailureAlert;
 
 	public LoginPage(WebDriver driver){
 		super(driver);
@@ -47,6 +50,11 @@ public class LoginPage extends BasePage {
 	public boolean isSignInEnabled()
 	{
 		return (SignInFormEle.isEnabled());
+	}
+	
+	public void isAuthanticationFailedAlertPresent()
+	{
+		authFailureAlert.isDisplayed();
 	}
 
 }
