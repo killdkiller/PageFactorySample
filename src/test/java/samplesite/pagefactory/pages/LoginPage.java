@@ -52,9 +52,10 @@ public class LoginPage extends BasePage {
 		return (SignInFormEle.isEnabled());
 	}
 	
-	public void isAuthanticationFailedAlertPresent()
+	public boolean isAuthanticationFailedAlertPresent()
 	{
-		authFailureAlert.isDisplayed();
+		
+		return authFailureAlert.isDisplayed();
 	}
 
 }

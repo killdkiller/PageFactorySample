@@ -7,3 +7,4 @@
 
 #Binaries2
 *.class
+/bin/

@@ -47,7 +47,8 @@ public class LoginTests extends BaseTest {
         }
         else
         {
-        	
+        	Assert.assertTrue(loginpageObj.isAuthanticationFailedAlertPresent());
+        	System.out.println("Invalid Credentials");
         }
         
         
