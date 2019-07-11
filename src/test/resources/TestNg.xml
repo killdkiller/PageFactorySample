@@ -1,11 +1,14 @@
 <suite  name ="SampleSuite1">
 	<test name ="SampleTest">
+		<groups>
+				<run>
+				<include  name ="Smoke Test">   </include>
+				</run>
+		</groups>
 		<parameter   name ="url"   value="http://automationpractice.com/index.php"></parameter>
 		<parameter  name ="browser"  value ="chrome"></parameter>
 			<classes>
-				<class name ="automationpractice.SampleSite.myFirstTestngTest"></class>
-				<class name ="automationpractice.SampleSite.DataProviderTest"></class>
-				<class name ="automationpractice.SampleSite.CheckingPriorityTest"></class>
+				<class name ="automationpractice.SampleSite.TestngGroupTest"></class>
 			</classes>
 	</test>
 </suite>
